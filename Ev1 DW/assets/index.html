@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Multimedia</title>
+  
+  <!-- Hojas de estilo -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Style/Style.css" />
+</head>
+<body id="body">
+  <!-- Pantalla de bienvenida inicial -->
+  <div id="overlay">
+    <button id="confia-btn">CONFÍA</button>
+  </div>
+
+  <!-- Cabecera del sitio -->
+  <header class="text-center p-3 bg-black text-white">
+    <h1 id="titulo">Bienvenido a R.E.P.O</h1>
+  </header>
+
+  <!-- Contenido principal - Carrusel de medios -->
+  <main class="d-flex justify-content-center align-items-center p-3">
+    <!-- Botón para retroceder en el carrusel -->
+    <button id="prev-btn" class="carousel-btn">◄</button>
+    
+    <!-- Contenedor de controles y video -->
+    <div class="media-controls-container">
+      <!-- Control de volumen -->
+      <div class="volume-control">
+        <span class="volume-icon">🔊</span>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="form-range">
+      </div>
+      
+      <!-- Contenedor del video con fondo -->
+      <div class="video-container">
+        <video id="bg-video" muted playsinline>
+          <source src="multimedia/video1.mp4" type="video/mp4" />
+        </video>
+        <audio id="bg-audio">
+          <source src="multimedia/audio1.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+    </div>
+
+    <!-- Botón para avanzar en el carrusel -->
+    <button id="next-btn" class="carousel-btn">►</button>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="text-center p-2 bg-black text-white">
+    <small>&copy; 2025 - Desarrollo Web</small>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Script/script.js"></script>
+</body>
+</html>
